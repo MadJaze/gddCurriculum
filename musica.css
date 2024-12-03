@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.6;
+    background-color: rgb(13, 17, 23);
+    color: #333;
+}
+
+header {
+    font-family: Arial, sans-serif;
+    background-color: #333;
+    padding: 10px 0;
+    margin: 0 auto;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease, font-size 0.3s ease; /* Animación suave */
+}
+
+
+nav ul li a:hover {
+    color: lightblue; /* Color al hacer hover */
+    font-size: 20px; /* Aumenta tamaño al hacer hover */
+} 
+
+h1 {
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 36px;
+}
+
+.music-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    
+    gap: 20px 0px;
+    padding: 40px;
+    justify-items: center;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.card audio {
+
+    
+    width: 100%;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

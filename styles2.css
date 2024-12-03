@@ -1,0 +1,364 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    
+    line-height: 1.6;
+    background-color: rgb(13, 17, 23);
+    color: #333;
+}
+
+header {
+    font-family: Arial, sans-serif;
+    background-color: #333;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease, font-size 0.3s ease; /* Animación suave */
+}
+
+
+nav ul li a:hover {
+    color: lightblue; /* Color al hacer hover */
+    font-size: 20px; /* Aumenta tamaño al hacer hover */
+}
+
+.intro {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    width: 100%;
+    height: 350px;
+    margin-bottom: 20px;
+    margin: 0 auto;
+    background-image: url('RecursosGraficos/ladrilloGris.jpg'); 
+   
+}
+
+.intro img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.intro-texto h1 {
+
+    font-size: 36px;
+    color: white;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+ 
+}
+
+.intro-texto h2 {
+
+    font-size: 24px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    padding-bottom: 20px;
+
+}
+
+.contenido {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    padding-bottom: 30px;
+    width: 50%;
+    background-color: #333;
+    margin: 0 auto;
+    margin-top: -20px;
+  
+
+}
+
+
+.descripcion {
+border-right: 2px solid white;
+
+}
+
+.descripcion, .contacto {
+    width: 45%;
+    color: white;
+    margin-left : 30px;
+   
+}
+
+.muchoscontatos {
+
+display: flex;
+
+}
+
+.descripcion h2, .contacto h2 {
+    font-size: 24px;
+    color: white; 
+    margin-bottom: 10px;
+
+}
+
+.contacto ul {
+    list-style: none;
+    color: white;
+}
+
+.contacto ul {
+    list-style: none;
+    color: white;
+    
+}
+
+.contacto ul li a:hover {
+    transition: color 0.3s ease, font-size 0.3s ease; /* Animación suave */
+}
+
+
+.contacto ul li a:hover {
+    color: lightblue;
+    font-size: 20px;
+}
+
+
+.contato, i {
+
+ border: 2px solid white; 
+ padding: 6px;
+ border-radius: 20px;
+ margin-right: 6px;
+
+}
+
+.experiencias ul  {
+    list-style-type: disc; /* Asegura que los puntos aparezcan */
+    padding-left: 30px;
+    text-align: left;
+    margin: 0 auto;
+    font-size: 17px;
+    width: fit-content; 
+}
+
+.experiencias  li {
+    margin-bottom: 10px; /* Opcional: agrega espacio entre los elementos de la lista */
+}
+
+
+.contato, a {
+
+color: white; 
+text-decoration: none;
+
+}
+
+.contacto ul li {
+    margin-bottom: 10px;
+ 
+    color: white; 
+}
+
+.experienciasanimacion {
+   
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    margin: 0 auto;
+    box-sizing: unset;
+   
+
+}
+
+.animacion img {
+
+    image-rendering: pixelated; 
+    margin-top: 20px;
+    margin-left: 30px;
+/*border: 20px solid black;*/
+
+}
+
+.experiencias {
+    padding: 20px;
+    color: white;
+    width: 50%;
+  background-color: rgb(13, 17, 23);
+    text-align: center;
+}
+
+.experiencias h2 {
+
+margin-top: 20 px;
+margin-bottom: 20px;
+padding: 20px;
+
+
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+/* Necesitamos ya que sea responsivo*/
+
+/* Para tablets (pantallas <= 768px) */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    .intro {
+        flex-direction: column; /* Cambia a columna */
+        text-align: center;
+        height: auto; /* Ajusta la altura */
+        padding: 20px;
+    }
+
+    .intro img {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto 10px;
+    }
+
+    .intro-texto h1, .intro-texto h2 {
+        font-size: 1.5rem;
+        padding: 10px;
+    }
+
+    .contenido {
+        width: 90%; /* Más ancho en pantallas pequeñas */
+        flex-direction: column; /* Apila los elementos */
+    }
+
+    .descripcion, .contacto {
+        width: 100%; /* Ocupa todo el ancho */
+        text-align: center; /* Centra el texto */
+        border-right: none; /* Quita bordes */
+        margin: 10px 0; /* Añade espacio entre secciones */
+    }
+
+    .muchoscontatos {
+        flex-direction: column; /* Cambia a columna */
+        align-items: center;
+    }
+
+    .experiencias ul {
+        padding-left: 10px; /* Ajusta el margen */
+    }
+
+    .animacion img {
+        margin: 20px auto; /* Centra la imagen */
+    }
+}
+
+/* Para móviles (pantallas <= 480px) */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px; /* Reduce el tamaño de fuente */
+    }
+
+    header {
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: column; /* Apila el menú */
+    }
+
+    nav ul li {
+        margin: 5px 0; /* Espaciado entre enlaces */
+    }
+
+    .contacto ul li {
+
+        text-align: left;
+        margin-left: 20px;
+
+    }
+    
+    
+
+    .experienciasanimacion {
+   
+        width: 100%;
+    display: flex;
+    flex-direction: column; /* Apila los elementos verticalmente */
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    margin: 0 auto;
+    box-sizing: border-box; /* Usa un box-sizing más estándar */
+       
+    
+    }
+
+    .experienciasanimacion img, 
+    .experienciasanimacion div, 
+    .experienciasanimacion p {
+        margin: 0 auto; /* Centra los hijos */
+        text-align: center; /* Centra el texto dentro de los hijos */
+    }
+
+    .experiencias {
+        padding: 20px;
+        color: white;
+        width: 90%;
+      background-color: rgb(13, 17, 23);
+        text-align: center;
+    }
+
+    
+.experiencias h2  {
+
+    font-size: 40px;
+}
+    
+.experiencias ul li  {
+
+    font-size: 17px;
+
+
+}
+ 
+    .intro-texto h1, .intro-texto h2 {
+        font-size: 1.2rem;
+    }
+
+    .experiencias ul {
+        font-size: 0.9rem;
+    }
+
+    footer {
+        font-size: 0.8rem; /* Reduce tamaño en móviles */
+        padding: 10px;
+    }
+}
