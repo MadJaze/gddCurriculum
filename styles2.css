@@ -306,8 +306,11 @@ footer {
 
     }
     
-    
+  .contenido {
 
+    border: 3px red solid; 
+
+  }
     .experienciasanimacion {
    
         width: 100%;
