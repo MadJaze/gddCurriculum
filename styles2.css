@@ -239,7 +239,7 @@ footer {
 
     .intro {
        /* flex-direction: column; /* Cambia a columna */
-        text-align: center;
+    
         height: auto; /* Ajusta la altura */
         padding: 20px;
     }
@@ -250,9 +250,13 @@ footer {
         margin: 0 auto 10px;
     }
 
-    .intro-texto h1, .intro-texto h2 {
+
+    .intro-texto h1{
         font-size: 1.5rem;
+  
+      text-align: end;
         padding: 10px;
+        padding-bottom: 0;
     }
 
     .contenido {
@@ -288,6 +292,20 @@ footer {
     }
 
   
+    .intro-texto {
+        width: 100%;
+      
+        margin-top: 40px;
+            background-color: black;
+        }
+
+        .intro-texto h1 {
+         
+            text-align: end;
+    
+                background-color: black;
+            }
+
 
 header {
   
@@ -373,36 +391,66 @@ nav ul li {
         display: flex;
         
         align-items: start;
-   
+        height: 200px;
         margin: 0 auto;
         background-image: url('RecursosGraficos/ladrilloGris.jpg'); 
        
     }
     
     .intro img {
-      
+
+            top: 40px; /* Ajusta para que se superponga al cuadro */
+    left: 50px; /* Ajusta la posición horizontal */
+        position: absolute; /* Permite colocarla encima */
         border-radius: 50%;
         margin: 0;
         display: flex; 
         align-items: start;
+        z-index: 2; /* Asegura que esté por encima del cuadro */
 
     }
     
+    .intro-texto {
+    
+    border-radius: 20px;
+      border: 3px solid;
+      border-color: rgb(90, 120, 7);;
+
+    overflow: hidden; /* Hace que la sombra respete el borde redondeado */
+    width:80%;
+        
+     
+    }
+
     .intro-texto h1 {
     
         font-size: 36px;
         color: white;
         padding-top: 10px;
-        padding-left: 20px;
+        padding-left: 0px;
         padding-right: 20px;
         background-color: rgba(0, 0, 0, 0.5);
-        text-align: center;
+        
      
     }
     
+    .intro-texto p{
+    
+        font-size: 12px;
+        color: white;
+     font-style: italic;
+     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        padding-left: 20px;
+        padding-right: 20px;
+        background-color: rgba(0, 0, 0, 0.5);
+        text-align: end;
+        padding-bottom: 20px;
+    
+    }
+
     .intro-texto h2 {
     
-        font-size: 24px;
+        font-size: 0px;
         color: white;
         background-color: rgba(0, 0, 0, 0.5);
         text-align: center;
