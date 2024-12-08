@@ -290,42 +290,51 @@ footer {
   
 
 header {
+  
     font-family: Arial, sans-serif;
     margin-top: 10px;
     background-color: rgb(13, 17, 23);
     padding: 0;
-    text-align: center;
+   
 }
 
-nav ul {
-    list-style: none;
+nav ul li {
+    padding: 10px;
+   
+    margin-right: 0;
+    margin-left: 0;
+    
+     list-style: none;
     justify-content: center;
  
     
 }
 
 
-   
-
     nav ul li a {
+       
+   
+      margin: 0 auto;
         position: relative;
-        padding: 5px 5px;
-        font-size: 8px;
+        padding: 9px;
+        font-size: 9px;
         color: white;
+ 
         background-color: #4CAF50; /* Verde brillante */
-        border: none;
-        border-radius: 15px;
+   
+        border-radius: 5px;
         cursor: pointer;
         overflow: hidden; /* Necesario para que la animación no salga del botón */
         transition: color 0.3s ease, font-size 0.3s ease; /* Animación suave */
       }
   
 
-
+  
 
       nav ul li a:hover {
-        background-color: #45a049; /* Un verde más oscuro */
-        font-size: 9px; /* Aumenta tamaño al hacer hover */
+        background-color: #122cf2; /* Un verde más oscuro */
+   
+        font-size: 10px; /* Aumenta tamaño al hacer hover */
         color: white;
     }
     
@@ -335,7 +344,7 @@ nav ul {
         top: 50%;
         left: 50%;
         width: 0;
-        height: 0;
+        height: 20px;
         background: rgba(255, 255, 255, 0.6); /* Color blanco semitransparente */
         border-radius: 50%;
         transform: translate(-50%, -50%);
@@ -345,8 +354,8 @@ nav ul {
 
        /* Animación de la onda */
        nav ul li a:hover::after {
-        width: 200px;
-        height: 200px;
+        width: 100px;
+        height: 100px;
         opacity: 0;
       }
   
@@ -357,6 +366,7 @@ nav ul {
       }
     
 
+      
 
     .intro {
         font-family: Arial, sans-serif;
@@ -409,7 +419,7 @@ nav ul {
     
   .contenido {
 
-    margin-top: 15px;
+    margin-top: 10px;
   border: 3px red solid; 
    position: relative; 
 
