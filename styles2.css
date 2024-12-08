@@ -238,7 +238,7 @@ footer {
     }
 
     .intro {
-        flex-direction: column; /* Cambia a columna */
+       /* flex-direction: column; /* Cambia a columna */
         text-align: center;
         height: auto; /* Ajusta la altura */
         padding: 20px;
@@ -279,24 +279,125 @@ footer {
     .animacion img {
         margin: 20px auto; /* Centra la imagen */
     }
-}
 
-/* Para móviles (pantallas <= 480px) */
+
+/* Para móviles (pantallas <= 480px) */ /*--------------------------------------------------------------------*/
 @media (max-width: 480px) {
     body {
         font-size: 14px; /* Reduce el tamaño de fuente */
     }
 
-    header {
-        padding: 10px;
-    }
+  
 
-    nav ul {
-        flex-direction: column; /* Apila el menú */
-    }
+header {
+    font-family: Arial, sans-serif;
+    margin-top: 10px;
+    background-color: rgb(13, 17, 23);
+    padding: 0;
+    text-align: center;
+}
 
-    nav ul li {
-        margin: 5px 0; /* Espaciado entre enlaces */
+nav ul {
+    list-style: none;
+    justify-content: center;
+ 
+    
+}
+
+
+   
+
+    nav ul li a {
+        position: relative;
+        padding: 5px 5px;
+        font-size: 8px;
+        color: white;
+        background-color: #4CAF50; /* Verde brillante */
+        border: none;
+        border-radius: 15px;
+        cursor: pointer;
+        overflow: hidden; /* Necesario para que la animación no salga del botón */
+        transition: color 0.3s ease, font-size 0.3s ease; /* Animación suave */
+      }
+  
+
+
+
+      nav ul li a:hover {
+        background-color: #45a049; /* Un verde más oscuro */
+        font-size: 9px; /* Aumenta tamaño al hacer hover */
+        color: white;
+    }
+    
+    nav ul li a::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        background: rgba(255, 255, 255, 0.6); /* Color blanco semitransparente */
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        transition: width 0.6s ease, height 0.6s ease, opacity 0.6s ease;
+        z-index: 1;
+      }
+
+       /* Animación de la onda */
+       nav ul li a:hover::after {
+        width: 200px;
+        height: 200px;
+        opacity: 0;
+      }
+  
+      /* Evitar que el texto del botón quede detrás del efecto */
+      nav ul li a span {
+        position: relative;
+        z-index: 2;
+      }
+    
+
+
+    .intro {
+        font-family: Arial, sans-serif;
+        display: flex;
+        
+        align-items: start;
+   
+        margin: 0 auto;
+        background-image: url('RecursosGraficos/ladrilloGris.jpg'); 
+       
+    }
+    
+    .intro img {
+      
+        border-radius: 50%;
+        margin: 0;
+        display: flex; 
+        align-items: start;
+
+    }
+    
+    .intro-texto h1 {
+    
+        font-size: 36px;
+        color: white;
+        padding-top: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        background-color: rgba(0, 0, 0, 0.5);
+        text-align: center;
+     
+    }
+    
+    .intro-texto h2 {
+    
+        font-size: 24px;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.5);
+        text-align: center;
+        padding-bottom: 20px;
+    
     }
 
     .contacto ul li {
@@ -308,9 +409,51 @@ footer {
     
   .contenido {
 
-    border: 3px red solid; 
+    margin-top: 15px;
+  border: 3px red solid; 
+   position: relative; 
 
   }
+
+  .contenido::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: lime; /* Punto verde */
+    /*border-radius: 50%; /* Forma de círculo */
+    box-shadow: 0 0 2px 2px lime; /* Efecto neón */
+    animation: recorrer-borde 4s linear infinite; /* Animación infinita */
+}
+
+@keyframes recorrer-borde {
+    0% {
+        top: 0;
+        left: 0;
+        transform: translate(0, 0);
+    }
+    25% {
+        top: 0;
+        left: 100%;
+        transform: translate(-50%, 0); /* Centrar en el borde */
+    }
+    50% {
+        top: 100%;
+        left: 100%;
+        transform: translate(-50%, -50%);
+    }
+    75% {
+        top: 100%;
+        left: 0;
+        transform: translate(0, -50%);
+    }
+    100% {
+        top: 0;
+        left: 0;
+        transform: translate(0, 0);
+    }
+}
+
     .experienciasanimacion {
    
         width: 100%;
