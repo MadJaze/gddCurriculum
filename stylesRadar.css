@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    background-color: #20232a;
+    color: white;
+}
+
+#radar-container {
+    display: inline-block;
+    position: relative;
+    margin: 20px auto;
+    width: 300px;
+    height: 300px;
+    border: 5px solid #61dafb;
+    border-radius: 50%;
+}
+
+
+#locate-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: greenyellow;
+    color: #20232a;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #21a1f1;
+}
+
+#radar-container {
+    position: relative;
+    width: 200px; /* Tamaño del radar */
+    height: 200px;
+    background: radial-gradient(circle, #2196f3, #0d47a1); /* Fondo del radar */
+    border-radius: 50%;
+    overflow: hidden;
+    margin: auto;
+  }
+  
+  #myPosition {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+    transform: translate(-50%, -50%); /* Centra el punto */
+  }
+  
+  #tabletPoint {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: green;
+    border-radius: 50%;
+    display: none; /* Se mostrará dinámicamente con JS */
+  }
+  
