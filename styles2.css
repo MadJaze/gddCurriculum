@@ -13,7 +13,7 @@ body {
 
 header {
     font-family: Arial, sans-serif;
-    background-color: black;
+ 
     padding: 10px 0;
     text-align: center;
     margin-top: 10px;
@@ -171,6 +171,7 @@ nav ul li a {
 .intro-texto p {
 
     font-size: 24px;
+    font-style: italic;
     color: white;
     background-color: rgba(0, 0, 0, 0.5);
     text-align: end;
@@ -249,15 +250,24 @@ nav ul li a {
 
 
 .descripcion {
-border-right: 2px solid white;
+border-right: 5px solid white;
+width: 360px;
+padding :20px; 
+margin-right: 20px;
 
 }
 
 .descripcion, .contacto {
-    width: 45%;
+    
     color: white;
-    margin-left : 30px;
    
+
+}
+
+.contacto {
+
+padding :20px; 
+
 }
 
 .muchoscontatos {
@@ -609,6 +619,23 @@ nav ul li {
         padding-bottom: 20px;
     
     }
+
+        .contacto {
+
+            padding : 0px;
+
+
+        }
+
+        
+        .contacto h2 {
+
+           margin-bottom: 50px;
+           line-height: 0%;
+
+
+        }
+
 
     .contacto ul li {
 
