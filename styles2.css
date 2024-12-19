@@ -13,9 +13,12 @@ body {
 
 header {
     font-family: Arial, sans-serif;
-    background-color: #333;
+    background-color: black;
     padding: 10px 0;
     text-align: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    
 }
 
 nav ul {
@@ -24,6 +27,81 @@ nav ul {
     justify-content: center;
     
 }
+
+/*999999999999*/
+
+
+nav ul li {
+    padding: 10px;
+   
+    margin-right: 0;
+    margin-left: 0;
+    
+     list-style: none;
+    justify-content: center;
+ 
+    
+}
+
+
+    nav ul li a {
+       
+   
+      margin: 0 auto;
+        position: relative;
+        padding: 9px;
+        font-size: 9px;
+        color: white;
+ 
+        background-color: #4CAF50; /* Verde brillante */
+   
+        border-radius: 5px;
+        cursor: pointer;
+        overflow: hidden; /* Necesario para que la animación no salga del botón */
+        transition: color 0.3s ease, font-size 0.3s ease; /* Animación suave */
+      }
+  
+
+  
+
+      nav ul li a:hover {
+        background-color: #122cf2; /* Un verde más oscuro */
+   
+        font-size: 20px; /* Aumenta tamaño al hacer hover */
+        color: white;
+    }
+    
+    nav ul li a::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 20px;
+        background: rgba(255, 255, 255, 0.6); /* Color blanco semitransparente */
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        transition: width 0.6s ease, height 0.6s ease, opacity 0.6s ease;
+        z-index: 1;
+      }
+
+       /* Animación de la onda */
+       nav ul li a:hover::after {
+        width: 100px;
+        height: 100px;
+        opacity: 0;
+      }
+  
+      /* Evitar que el texto del botón quede detrás del efecto */
+      nav ul li a span {
+        position: relative;
+        z-index: 2;
+      }
+    
+
+
+
+/*9999999999999999*/
 
 nav ul li {
     margin: 0 15px;
@@ -37,10 +115,6 @@ nav ul li a {
 }
 
 
-nav ul li a:hover {
-    color: lightblue; /* Color al hacer hover */
-    font-size: 20px; /* Aumenta tamaño al hacer hover */
-}
 
 .intro {
     font-family: Arial, sans-serif;
@@ -52,15 +126,34 @@ nav ul li a:hover {
     height: 350px;
     margin-bottom: 20px;
     margin: 0 auto;
+
+
     background-image: url('RecursosGraficos/ladrilloGris.jpg'); 
    
 }
 
 .intro img {
-    width: 150px;
-    height: 150px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
-    margin-right: 20px;
+    border-left: solid 6px;
+    position: absolute;
+  margin-right: 400px;
+    z-index: 2;
+    border-color: rgb(90, 120, 7);
+    
+}
+
+.intro-texto {
+
+  
+    background-color: black;
+    border: solid 8px;
+   width: 490px;
+    border-color: rgb(90, 120, 7);
+    border-radius: 20px;
+    z-index : 1;
+
 }
 
 .intro-texto h1 {
@@ -71,17 +164,18 @@ nav ul li a:hover {
     padding-left: 20px;
     padding-right: 20px;
     background-color: rgba(0, 0, 0, 0.5);
-    text-align: center;
+    text-align: end;
  
 }
 
-.intro-texto h2 {
+.intro-texto p {
 
     font-size: 24px;
     color: white;
     background-color: rgba(0, 0, 0, 0.5);
-    text-align: center;
+    text-align: end;
     padding-bottom: 20px;
+    padding-right: 20px;
 
 }
 
@@ -99,6 +193,59 @@ nav ul li a:hover {
   
 
 }
+
+
+/*Contenido animado nuevo */
+  
+.contenido {
+
+  
+    border: 3px red solid; 
+     position: relative; 
+  
+    }
+  
+    .contenido::before {
+      content: '';
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background-color: lime; /* Punto verde */
+      /*border-radius: 50%; /* Forma de círculo */
+      box-shadow: 0 0 2px 2px lime; /* Efecto neón */
+      animation: recorrer-borde 4s linear infinite; /* Animación infinita */
+  }
+  
+  @keyframes recorrer-borde {
+      0% {
+          top: 0;
+          left: 0;
+          transform: translate(0, 0);
+      }
+      25% {
+          top: 0;
+          left: 100%;
+          transform: translate(-50%, 0); /* Centrar en el borde */
+      }
+      50% {
+          top: 100%;
+          left: 100%;
+          transform: translate(-50%, -50%);
+      }
+      75% {
+          top: 100%;
+          left: 0;
+          transform: translate(0, -50%);
+      }
+      100% {
+          top: 0;
+          left: 0;
+          transform: translate(0, 0);
+      }
+  }
+
+
+/*END contenido animado nuevo*/
 
 
 .descripcion {
@@ -248,6 +395,9 @@ footer {
         width: 120px;
         height: 120px;
         margin: 0 auto 10px;
+        border-left: solid 3px;
+       
+        border-color: rgb(90, 120, 7);
     }
 
 
@@ -402,6 +552,8 @@ nav ul li {
             top: 40px; /* Ajusta para que se superponga al cuadro */
     left: 50px; /* Ajusta la posición horizontal */
         position: absolute; /* Permite colocarla encima */
+       width: 130px;
+       height: 130px;
         border-radius: 50%;
         margin: 0;
         display: flex; 
@@ -414,7 +566,7 @@ nav ul li {
     
     border-radius: 20px;
       border: 3px solid;
-      border-color: rgb(90, 120, 7);;
+      border-color: rgb(90, 120, 7);
 
     overflow: hidden; /* Hace que la sombra respete el borde redondeado */
     width:80%;
@@ -467,7 +619,7 @@ nav ul li {
     
   .contenido {
 
-    margin-top: 10px;
+  
   border: 3px red solid; 
    position: relative; 
 
