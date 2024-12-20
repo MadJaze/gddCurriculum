@@ -444,6 +444,12 @@ background-color: rgba(0, 0, 0, 0);
         padding-top: 12px;
     }
 
+    .descripcion {
+
+        width: 250px;
+        
+    }
+
     .contenido {
 
 width: 85%;
