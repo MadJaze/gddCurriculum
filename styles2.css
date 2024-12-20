@@ -172,6 +172,7 @@ nav ul li a {
 
     font-size: 24px;
     font-style: italic;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: white;
     background-color: rgba(0, 0, 0, 0.5);
     text-align: end;
@@ -396,32 +397,56 @@ footer {
 
     .intro {
        /* flex-direction: column; /* Cambia a columna */
-    
-        height: auto; /* Ajusta la altura */
+        
+        height: 200px; /* Ajusta la altura */
         padding: 20px;
     }
 
     .intro img {
-        width: 120px;
-        height: 120px;
-        margin: 0 auto 10px;
+        width: 150px;
+        height: 150px;
+      margin-right : 190px;
         border-left: solid 3px;
-       
+       position: absolute;
         border-color: rgb(90, 120, 7);
     }
 
 
-    .intro-texto h1{
-        font-size: 1.5rem;
+.intro-texto{
+
+width: 300px;
+height: 90px;
+display: flex;
+position: relative;
+flex-direction: column;
+border: 3px solid;
+border-color: rgb(90, 120, 7);
+
+    
+}
+
+.intro-texto p{
+
   
+    font-size: 14px;
+padding-right: 15px;
+background-color: rgba(0, 0, 0, 0);
+        
+    }
+
+    .intro-texto h1{
+        font-size: 1.2rem;
+        background-color: rgba(0, 0, 0, 0);
       text-align: end;
-        padding: 10px;
+     
+        padding: 15px;
         padding-bottom: 0;
+        padding-top: 12px;
     }
 
     .contenido {
 
-width: 80%;
+width: 85%;
 
     }
 
@@ -436,6 +461,7 @@ width: 80%;
 
     .animacion img {
         margin: 20px auto; /* Centra la imagen */
+        margin-top: 50px;
     }
 
 
@@ -614,6 +640,41 @@ nav ul li {
     
     }
 
+    /*.descripcion {
+
+        margin-right: 0;
+        border-right: none;
+        border-bottom: 2px solid white;
+        margin-bottom: 40px;
+
+    }*/
+
+    .descripcion {
+        margin-right: 0;
+        border-right: none;
+        margin-bottom: 40px;
+        position: relative; /* Necesario para posicionar el pseudo-elemento */
+    }
+    
+    .descripcion:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%; /* Centrado */
+        transform: translateX(-50%);
+        width: 50%; /* El ancho que deseas para el borde */
+        height: 2px; /* Grosor del borde */
+        background-color: white; /* Color del borde */
+    }
+
+    .muchoscontatos {
+
+display: flex;
+flex-direction: column;
+text-align: center;
+
+    }
+
         .contacto {
 
             padding : 0px;
@@ -643,6 +704,9 @@ nav ul li {
   
   border: 3px red solid; 
    position: relative; 
+   display: flex; 
+   flex-direction: column;
+   text-align: center;
 
   }
 
