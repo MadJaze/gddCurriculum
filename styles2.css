@@ -389,7 +389,7 @@ footer {
 /* Necesitamos ya que sea responsivo*/
 
 /* Para tablets (pantallas <= 768px) */
-@media (max-width: 768px) {
+@media (max-width: 808px) {
     body {
         font-size: 16px;
     }
@@ -420,19 +420,13 @@ footer {
     }
 
     .contenido {
-        width: 90%; /* Más ancho en pantallas pequeñas */
-        flex-direction: column; /* Apila los elementos */
-    }
 
-    .descripcion, .contacto {
-        width: 100%; /* Ocupa todo el ancho */
-        text-align: center; /* Centra el texto */
-        border-right: none; /* Quita bordes */
-        margin: 10px 0; /* Añade espacio entre secciones */
+width: 80%;
+
     }
 
     .muchoscontatos {
-        flex-direction: column; /* Cambia a columna */
+      
         align-items: center;
     }
 
