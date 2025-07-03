@@ -2,26 +2,112 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: rgba( 12, 17, 21, 1);
+
+    .espacio {
+
+        height: 130px;
+    }
 }
 header {
     background-color: #333;
-    color: #fff;
-    padding: 1rem 0;
+width: 100%;
+    position: fixed;
+    top: 0;
     text-align: center;
+ 
+   
 }
+h1 {
+
+    color:  rgba(200, 223, 81, 1) ;
+}
+
+.header-container {
+
+   display:flex;
+    justify-content: space-between;
+    align-items: center;
+width : 90%;
+margin: auto;
+height: 130px;
+padding: 10px;
+
+}
+
+.logo-header {
+
+
+background-color: black;
+border-radius: 10px;
+padding-bottom: 17px;
+padding-top: 17px;
+
+padding-right: 40px;
+padding-left:40px ;
+
+
+
+
+}
+
+nav{
+
+
+   background-color: #333;
+
+}
+
 nav ul {
     list-style: none;
-    padding: 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+   
+  
 }
 nav ul li {
+
+
     display: inline;
-    margin-right: 1rem;
+
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  
+ 
+  
 }
+
+#features h2 {
+
+      color:  rgba(200, 223, 81, 1) ;
+      text-align: center;
+      margin-top: 40px;
+      padding 30px;
+} 
+
 nav ul li a {
+       border: solid 2px  rgba(200, 223, 81, 1) ;
+    background-color: black;
+    display: inline;
+     
+    padding: 20px;
+    margin: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  
+    border-radius: 20px;
     color: #fff;
     text-decoration: none;
 }
+
+
+nav ul li :hover {
+
+   border: solid 2px  red ;
+   
+    
+ 
+}
+
+
 section {
     padding: 2rem;
     margin: 2rem 0;
@@ -33,6 +119,7 @@ footer {
     text-align: center;
     padding: 1rem 0;
     background-color: #333;
+    
     color: #fff;
    /* position: fixed;*/
     width: 100%;
@@ -45,3 +132,111 @@ color : #f4f4f4;
 
 
 }
+
+
+
+/*about section style */
+
+.about {
+
+display: flex;
+ background-color: rgba( 12, 17, 21, 1);
+ margin: 45px 45px 0px 45px;
+
+
+}
+
+
+.about-link {
+
+
+
+text-align: center;
+padding: 30px;
+
+
+margin: auto;
+
+}
+
+.about-link-container{
+
+  width: 50%;
+  margin: auto; 
+  background-color: red;
+}
+
+.about-link-container :hover{
+
+
+background-color: green;
+
+    margin: auto;
+
+}
+
+
+
+
+.about-link a{
+
+
+color: white;
+text-decoration: none;
+
+
+
+
+}
+
+
+.about-video {
+
+margin-top: 15px;
+
+}
+
+.about-texto {
+
+
+padding-left: 20px;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+text-transform: uppercase;
+font-weight: bold;
+color : rgba(209,212, 217, 1);
+
+} 
+
+
+.about-texto h1 {
+
+
+    margin-top :0;
+}
+
+#features {
+background-color: black;
+
+}
+
+#features ul{
+
+display: grid;
+align-items: center;
+ grid-template-columns: repeat(3, 1fr);
+gap: 10px;
+
+
+}
+
+#features ul li{
+
+text-align: center;
+margin: auto;
+list-style: none;
+color: white;
+width: 250px;
+
+
+}
+
