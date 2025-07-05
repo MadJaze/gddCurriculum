@@ -458,7 +458,7 @@ padding-top: 60px;
 }
 
 #features ul{
-
+    display: grid; 
 padding: 40px;
  grid-template-columns: repeat(1, 1fr);
 gap: 10px;
