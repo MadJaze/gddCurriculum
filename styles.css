@@ -10,7 +10,9 @@ body {
     }
 }
 header {
-    background-color: #333;
+    background-color: black;
+      border-top: solid 8px #333;
+    border-bottom: solid 8px #333;
 width: 100%;
     position: fixed;
     top: 0;
@@ -84,11 +86,11 @@ left :560px;
 
 background-color: black;
 border-radius: 10px;
-width: 600px;
-
+  width: 600px;
+  height: 120px;
 overflow: hidden;
-padding: 20px;
 
+margin-left: 70px;
 }
 
 .logo-header {
@@ -96,10 +98,24 @@ padding: 20px;
 
 
 padding: 0; 
-display: block;
+background-color: black;
 width: 150px;
-margin-left: 50px;
+position: fixed;
+left: 120px;
 image-rendering: pixelated; 
+object-fit: cover;
+position: fixed;
+top: 28px;
+
+
+}
+
+
+.logo-header2 {
+
+width: 650px;
+image-rendering: pixelated; 
+
 object-fit: cover;
 
 
@@ -109,7 +125,7 @@ object-fit: cover;
 nav{
 
 
-   background-color: #333;
+
    margin-right: 180px;
 
 }
@@ -213,8 +229,6 @@ display: flex;
 
 text-align: center;
 padding: 30px;
-
-
 margin: auto;
 
 }
@@ -351,9 +365,12 @@ margin :0 auto;
 }
 
 
-.logo header{
+.logo-header{
 
-padding-left: 0;
+  position: fixed;
+left: 40px;
+top: 15px;
+background-color: black;
 
 }
 
