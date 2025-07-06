@@ -87,7 +87,7 @@ left :560px;
 background-color: black;
 border-radius: 10px;
   width: 600px;
-  height: 120px;
+  height: 100px;
 overflow: hidden;
 
 margin-left: 70px;
@@ -105,7 +105,7 @@ left: 120px;
 image-rendering: pixelated; 
 object-fit: cover;
 position: fixed;
-top: 28px;
+top: 35px;
 
 
 }
@@ -349,31 +349,43 @@ width: 100%;
 
 .header-container {
 
+  border-top: solid 20px black;
+ 
 margin: 0 auto; 
-  padding-left: 0;
-
+  padding: 0;
+height: 90px;
+background-color: rgba(0,0,0,0)
  
 }
 
 .logo-container {
 
+  
   width: 100%;
 margin :0 auto;
   left: 0;
+  height: 100px;
     border-radius: 0px;
+    background-color: black;
 
 }
 
 
 .logo-header{
 
+  width: 120px;
   position: fixed;
 left: 40px;
-top: 15px;
+top: 25px;
 background-color: black;
 
 }
+.logo-header2{
 
+width: 100%;
+
+
+}
 .gif-icon4 {
   height: 40px; /* little fire */
   position: fixed;
