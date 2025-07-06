@@ -13,7 +13,7 @@ header {
     background-color: black;
       border-top: solid 8px #333;
     border-bottom: solid 8px #333;
-width: 100%;
+  width: 100%;
     position: fixed;
     top: 0;
     text-align: center;
@@ -38,7 +38,8 @@ h1 {
 width : 100%;
 margin: auto;
 height: 130px;
-padding: 10px;
+padding: 0 10px;
+
 overflow: hidden;
 
 
@@ -87,10 +88,10 @@ left :560px;
 background-color: black;
 border-radius: 10px;
   width: 600px;
-  height: 100px;
+  height: 150px;
 overflow: hidden;
 
-margin-left: 70px;
+margin-left: 30px;
 }
 
 .logo-header {
@@ -113,8 +114,8 @@ top: 35px;
 
 .logo-header2 {
 
-width: 650px;
-image-rendering: pixelated; 
+width: 510px;
+padding: 0;
 
 object-fit: cover;
 
@@ -326,6 +327,9 @@ align-items: center;
 flex-direction: column;
 margin: auto;
 
+height: 90px;
+background-color: rgba(0,0,0,0);
+
 
 }
 
@@ -349,14 +353,10 @@ width: 100%;
 
 .header-container {
 
-  border-top: solid 20px black;
- 
-margin: 0 auto; 
+
   padding: 0;
-height: 90px;
-background-color: rgba(0,0,0,0)
- 
 }
+
 
 .logo-container {
 
@@ -383,7 +383,8 @@ background-color: black;
 .logo-header2{
 
 width: 100%;
-
+height: 90px;
+margin: 0;
 
 }
 .gif-icon4 {
@@ -461,7 +462,7 @@ display: flex;
 flex-direction:column;
 align-items: center;
 justify-self: center;
-margin-top: 40px;
+margin-top: 0;
 padding: 0;
 width: 85%;
 }
