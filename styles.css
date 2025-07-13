@@ -524,27 +524,25 @@ iframe{
 list-style: none;
 margin-top: 50%;
 font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-align-items: center;
-text-decoration: none;
+
 }
 
 
 #menu ul li{ 
 
 padding: 10px;
-font-size: 15px;
+font-size: 13px;
 color: white;
 border: solid 2px  rgba(200, 223, 81, 1) ;
 background-color: black;
 border-radius: 20px;
-
 margin: 5vh 15vh;
-
+transition: 1s ease-in-out;
 
 }
 
 
-#menu ul  :hover {
+#menu ul li:hover {
 
    border: solid 2px  red ;
 
@@ -555,7 +553,8 @@ margin: 5vh 15vh;
 
   color: white;
   text-decoration: none;
-margin: 0 auto;
+
+
 
 }
 
