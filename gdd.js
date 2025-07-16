@@ -6,6 +6,8 @@ const menu = document.getElementById("menu");
 const nav_buttons = document.getElementsByClassName("nav-buttons");
 
 //Coloquei nela numa função click 
+//Toogle menu and links 
+
 
 nav_mobile.addEventListener("click", function(){
 

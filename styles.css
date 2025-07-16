@@ -513,6 +513,7 @@ iframe{
   width: 100%;
   position: fixed;
 
+  transition: opacity 0.3s ease, transform 0.3s ease;
 
 }
 
