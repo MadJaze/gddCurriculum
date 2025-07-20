@@ -1,73 +1,8 @@
-/*alert("ATENÇÃO: DIGITEM AS SUAS INFORMAÇÕES PARA JOGAR SPACESHIP.JS");
-
-alert("Jogador 1: ");
-
-let nome1 = prompt("Digite seu nome: ");
-let idade1 = Number(prompt("digite sua idade"));
-let sobrenome1 = prompt("Digite seu sobrenome: ");
-let corFavorita1 = prompt("Qual a sua cor favorita: ")
-
-alert("Jogador 2: ")
-
-let nome2 = prompt("Digite seu nome: ");
-let idade2 = Number(prompt("digite sua idade"));
-let sobrenome2 = prompt("Digite seu sobrenome: ");
-let corFavorita2 = prompt("Qual a sua cor favorita: ")
-
-
-console.table({
-
-nome: nome1,
-idade: idade1,
-sobrenome: sobrenome1,
-cor: corFavorita1,
-
-}) 
-
-console.table({
-
-nome: nome2,
-idade: idade2,
-sobrenome: sobrenome2,
-cor: corFavorita2,
-
-}) 
-
-if (idade1 > idade2) {
-
-alert(nome2 + " é mais novo que " + nome1);
-
-} else if (idade1 === idade2) {
-
-  alert("Os dois tem a mesma idade..: " + idade1);
-
-} else if ( isNaN(idade1)|| isNaN(idade2)) {
-
-  alert("Não da para comparar valores null, recarregue a página e insira as informações corretamente");
-
-} else {
-
-  alert(nome2 + " é mais velho que " + nome1);
-}
 
 
 
 
-if (corFavorita1 === corFavorita2) {
-
-alert("ambos gostam da mesma cor: " + corFavorita1 )
-
-
-} else {
-
-alert(nome1 + " " + sobrenome1 + " gosta da cor: " + corFavorita1 );
-alert(nome2 + " " + sobrenome2 + " gosta da cor: " + corFavorita2 );
-}
-
-*/
-
-//Formulario para creação de jogadores:
-//Primeira tela: Obter a quantidade de jogadores from user 
+//Formulario 1 Cadastro de jogadores////////////oooooooo////oooooo////////brncando com dom//////////////////////////
 
 const title = document.getElementById("title");
 const instruction = document.getElementById("instruction");
@@ -189,9 +124,6 @@ for (i = 0; i < quantidade; i++) {
 
 
 }
-
-
-
 
 function dialogoInterativo() {
 
@@ -327,6 +259,7 @@ function dialogoInterativo() {
 
     h1text.textContent = "Quantidade de jogadores (MAX 5)"
     h1text.style.color = "white"
+  
     title.appendChild(h1text);
 
     //numJogadores.placeholder = "escreva seu nome";
@@ -457,148 +390,7 @@ function dialogoInterativo() {
 
 
 
-/*
 
-alert("Versão 1.3 register System: AGORA PODE INGRESAR MAIS JOGADORES NA SPACESHIP.JS")
-
-let numJogadores = Number(prompt("Quántos jogadores vão se cadastrar? (MAX jogadores = 5)"));
-const maxJogadores = 5;
-
-
-
-
-
-while (isNaN(numJogadores) || numJogadores === 0 || numJogadores > 5) {
-
- 
-  
-alert("Insira um número real de jogadores!")
-numJogadores = Number(prompt("Quántos jogadores vão se cadastrar? (NUMEROS)"));
-
-while (numJogadores > 5) {
-
-alert("MAXIMO DE JOGADORES: 5!")
-numJogadores = Number(prompt("Quántos jogadores vão se cadastrar? (NUMEROS MAX 5)"));
-
-}
-
-
-}
-
-function jogadores(nome, idade, cor) {
-
-  this.nome = nome;
-  this.idade = idade;
-  this.cor = cor;
-
-
-}
-
-
-//A lista aqui é para tirar os itens em quanto estejam sendo selecionados pelos jogadores. 1 para dada jogador.
-
-listaCores = ["vermelha", "azul", "amarelo", "verde", "roxo"];
-
-
-let listaJogadores = []; //Com esta lista estaremos guardando as informções dos jogadores 
-
-// Registrar cada jogador com um for loop 
-
-for (i = 0; i < numJogadores; i++) {
-
-let nome = prompt(`Qual o nome do jogador ${i + 1} `)
-let idade = Number(prompt("Qual a sua Idade?"))
-
-while (isNaN(idade) || idade === 0)  {
-
-alert("Digite números.");
-
-idade = Number(prompt("Qual a sua Idade? (NUMEROS)"));
-
-}  
-
-let cor = prompt(`Escolha a cor da sua SPACESHIP, cores disponíveis: ${listaCores.join(" , ")}.`).toLowerCase();
-
-
-while (!listaCores.includes(cor)) {
-
-alert(`Essa cor: ${cor}, não se encontra disponível, tente novamente.`);
-cor = prompt(`Escolha a cor da sua SPACESHIP, cores disponíveis: ${listaCores}.`).toLowerCase();
-
-} 
-
-// Eliminação das cores da lista 
-
-if (listaCores.includes(cor)) {
-
-  let index = listaCores.indexOf(cor);
-
-  listaCores.splice(index, 1);
-
-  alert(`Você escolheu a cor: ${cor}!! Cores restantes: ${listaCores.join(" , ")}`)
-
-let jogador = new jogadores(nome, idade, cor);
-listaJogadores.push(jogador);
-
-} 
-
-
-
-
-}
-
-
-function somarIdades() {
-
-let soma = 0; 
-
-for (i = 0; i < numJogadores; i++) {
-
-
-  soma+= listaJogadores[i].idade;
-
-}
-
-  console.log(`Total das idades calculadas: ${soma}`);
-}
-
-somarIdades()
-
-function encontrarMaisVelhoEJovem() {
-  if (listaJogadores.length === 0) return;
-
-  let maisVelho = listaJogadores[0];
-  let maisJovem = listaJogadores[0];
-
-  for (let i = 1; i < listaJogadores.length; i++) { 
-    let jogador = listaJogadores[i];
-
-    //0 é o elemento comparável, em quanto algúm outro valor NÃO seja mais alto que o atual 0.
-    // o 0 ficará na variável "maisVelho" até encontrar outra idade maior que a dele. 
-
-    if (jogador.idade > maisVelho.idade) {
-      maisVelho = jogador;
-    }
-
-    //o Primeiro elemento 0 é comparado com o restante da lista.
-    //Sustituido apenas quando encontrar um valor mais baixo.
-
-    if (jogador.idade < maisJovem.idade) {
-      maisJovem = jogador;
-    }
-  }
-
-  console.log("Jogador mais velho: " + maisVelho.nome + " (" + maisVelho.idade + " anos)");
-  console.log("Jogador mais jovem: " + maisJovem.nome + " (" + maisJovem.idade + " anos)");
-}
-
-encontrarMaisVelhoEJovem();
-
-
-//Mostra a lista dos jogadores
-console.log(listaJogadores);
-
-*/
 
 //////////////////////////////////////////////////////////////// SPACE SHIP 0.1 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
@@ -814,3 +606,181 @@ moverJugador();
 
 
 spaceShip()
+
+// FORMULARIO COM SUPERVISOR DE ERROS ////////////OOO/////////////////OOOO//////////////////////OOOOO////////////OOOO/////
+
+let form = document.getElementById('formulario');
+
+
+// dados do formulario, explicação dos erros 
+
+
+form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    let formData = new FormData(form);
+
+    let dados = {
+
+        nome: formData.get("username").trim(),
+        email: formData.get("email").trim(),
+        telefone: formData.get("telefone").trim(),
+        idade: +formData.get("idade"),
+        senha: formData.get("password"),
+        senhaConfirm: formData.get("password_confirm"),
+        termoseCondicoes: !!formData.get("termos-e-condicoes")
+
+    };
+
+
+    let erros = [];
+
+    if (!ValidaObrigatorio(dados.nome)) {
+        erros.push("Username é obrigatorio"); 
+    } else if (!ValidaPeloMenosDosCarateres(dados.nome)) { 
+        erros.push("O nome precisa pelo menos ter dois carateres");
+    }
+
+
+    if (!validaMaiorouIguala18(dados.idade)) {
+        erros.push("Precisa ser maior de idade para Login");
+    }
+
+    if (!validaFormatoCelular(dados.telefone)) {
+        erros.push("Número de telefone inválido (99999-9999)");
+    }
+
+    if (!validaFormatoEmail(dados.email)) {
+        erros.push("email inválido");
+    }
+
+
+    if (!ValidaObrigatorio(dados.senha)) {
+        erros.push("Uma senha é obrigatoria");
+    } else if (!ValidarSenha(dados.senha)) {
+        erros.push("A senha deve seguir o formato indicado");
+    } else if (!ValidarIguais(dados.senha, dados.senhaConfirm)) {
+        erros.push("A senha deve conferir com sua confirmação");
+    }
+
+    if(!ValidartermoseCondicoes(dados.termoseCondicoes)){
+        erros.push("Aceite os terminos e condições para continuar")
+    }
+
+    Exibirerros(erros)
+        if(!erros.length) {
+            setTimeout(() => alert('Seus dados foram enviados para a lua!'), 0)
+        }
+    
+        console.log(dados);
+        console.log(erros);
+
+});
+
+
+
+
+//funçoes condicionales de valor com Regex
+
+function ValidaObrigatorio(valor) {
+    return !!valor;
+}
+
+
+function ValidaPeloMenosDosCarateres(valor) {
+    return valor.length >= 2; 
+}
+
+function validaMaiorouIguala18(valor) {
+    return valor >= 18;
+}
+
+function validaFormatoEmail(valor) {
+    return /^\S+@\S+$/.test(valor);
+}
+
+
+function validaFormatoCelular(valor) {
+   
+
+    return /^[0-9]{5}-[0-9]{4}$/.test(valor);
+}
+
+function ValidarSenha(valor) {
+
+    return /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/.test(valor)
+     
+}
+
+
+function ValidarIguais(valor1, valor2) {
+
+    return valor1 === valor2;
+}
+
+function ValidartermoseCondicoes(valor) {
+    return !!valor
+};
+
+function Exibirerros(erros) {
+    let areaErros = document.getElementById("erros_area");
+    areaErros.innerHTML = ""
+
+    let listaErros = document.createElement('ul')
+    listaErros.style.color = 'red';
+
+
+    for (let erro of erros) {
+        let item = document.createElement('li')
+        item.textContent = erro;
+        listaErros.appendChild(item);
+    }
+
+    areaErros.appendChild(listaErros)
+}
+// Getting API ////////////OOO/////////////////OOOO//////////////////////OOOOO////////////OOOO/////
+
+
+function getAPI() {
+
+const ul = document.querySelector('ul');
+const user = document.querySelector('#user').value;
+
+ul.innerHTML = " "; 
+
+fetch(`https://api.github.com/users/${user}/repos`)
+.then(async res => {
+
+
+let data = await res.json();
+
+data.map(item => {
+
+let li = document.createElement('li');
+li.classList.add("margin-padding10");
+let hr = document.createElement('hr');
+
+li.innerHTML = `<strong>${item.name}</strong>`
+
+ul.appendChild(li);
+ul.appendChild(hr); 
+
+});
+
+
+
+
+
+
+
+
+})
+.catch(e => {
+
+  console.log(e);
+
+}) 
+
+
+
+}

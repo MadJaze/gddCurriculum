@@ -18,18 +18,130 @@
 
     </div>
 
+
+<main class="container">
+
+
 <div id="section-jogo">
+<p id="messager"></p>
+<div id="jogador" class="idle">
+</div>
+</div>
 
-<p></p>
+<div id="section-API">
 
-    <div id="jogador" class="idle">
+<p class="margin-padding10">GitHub API</p>
+
+<label for="" class="margin-padding10"> Nome de Usuario</label>
+<input type="text" id="user" class="margin-padding10">
+<button onclick="getAPI()" class="margin-padding10">Buscar</button>
+<hr>
+
+<ul class="margin-padding10">
 
 
-    </div>
 
+
+</ul>
+
+</div>
+
+
+<div id="section-form">
+
+     <form action="" id="formulario" method= "GET">
+
+            <h2>Another secret site <i class="fas fa-moon"></i></h2> 
+
+    
+
+                <div class="input_field">
+
+                    <input type="text" name='username' id="username" class = "inputs" placeholder="Insira seu nome de usuário">
+
+                    <div class="underline"></div>
+
+                </div>
+
+              
+
+                <div class="input_field">
+
+                    <input type="email" name='email' id="email" class = "inputs" placeholder="Insira seu email">
+
+                    <div class="underline"></div>
+
+                </div>
+
+           
+
+                <div class="input_field">
+
+                    <input type="text" name='telefone' id="telefone" class = "inputs" placeholder="Insira seu telefone: (99999-9999)">
+
+                    <div class="underline"></div>
+
+                </div>
+
+                <div class="input_field">
+
+                    <input type="number" name='idade' id="idade" class = "inputs" placeholder="Idade (menores não aceitos)">
+
+                    <div class="underline"></div>
+
+                </div>
+
+             
+
+                <div class="input_field">
+
+                    <input type="password" name='password' id="password" class = "inputs" placeholder="Insira sua senha">
+
+                    <div class="underline"></div>
+
+                </div>
+
+                <div class="suggest">
+
+                <p>(mínimo 8 carateres: 1 maiusculo, 1 Digito)</p>
+
+                </div>
+
+                <div class="input_field">
+
+                    <input type="password" name='password_confirm' id="password" class = "inputs" placeholder="Confirme sua senha">
+
+                    <div class="underline"></div>
+
+         
+
+                </div>
+
+                <div class="check_field">
+
+
+                <label>Aceito los terminos e condiciones</label>
+
+                <input type="checkbox" name = "termos-e-condicoes">
+
+                </div> 
+
+                <input type="submit" id="enviar" value='Enviar dados' id = "check_box">
+
+  
+            <div id="erros_area"> 
+
+
+
+            </div>
+
+        </form>
 
 
 </div>
+
+
+</main>
 
 <script src="programacao.js"></script>
 </body>
