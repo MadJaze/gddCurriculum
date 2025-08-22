@@ -379,6 +379,29 @@ padding: 20px;
 
 }
 
+.experiencia {
+
+    width: 80%;
+    margin: auto;
+    margin-top: 3%;
+    color: antiquewhite;
+  font-size: large;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+
+.experiencia-texto {
+
+    width: 30%;
+
+}
+
+
+.experiencia-imagem {
+ image-rendering: pixelated; 
+}
+
 footer {
     background-color: #333;
     color: white;
@@ -461,6 +484,26 @@ width: 85%;
 font-size: 13px;
 
     }
+
+    .experiencia {
+
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+   
+  font-size: large;
+    display: flex;
+    flex-direction: column;
+  
+}
+
+.experiencia-texto {
+
+    width: fit-content;
+
+    margin-top: 30px;
+
+}
 
     .muchoscontatos {
       
@@ -732,6 +775,7 @@ text-align: center;
     box-shadow: 0 0 2px 2px lime; /* Efecto neón */
     animation: recorrer-borde 4s linear infinite; /* Animación infinita */
 }
+
 
 @keyframes recorrer-borde {
     0% {
